@@ -1,0 +1,27 @@
+<h1>Seja bem vindo ao curso de Angular</h1>
+<h4 class="text-danger">{{anuncio}}</h4>
+
+<div class="card" style="width: 18rem;">
+    <img [src]="foto" alt="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{nomeProduto}}</h5>
+        @if(promocao)
+        {
+            <span class="badge text-bg-success">Promoção</span>
+        }
+        @else
+        {
+            <span class="badge text-bg-primary">Aproveite</span>
+        }
+        <!-- <span *ngIf="promocao; else elseBlock" class="badge text-bg-success">Promoção</span>
+            <ng-template #elseBlock>
+                <span class="badge text-bg-primary">Aproveite</span>
+            </ng-template>-->
+
+
+
+
+        <p class="card-text">Identificação {{idProduto}}</p>
+        <a href="#" class="btn btn-primary float-end">R$ {{precoProduto}}</a>
+    </div>
+</div>
